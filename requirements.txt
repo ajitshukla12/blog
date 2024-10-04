@@ -6,7 +6,7 @@ cement==2.10.14
 certifi==2024.8.30
 charset-normalizer==3.3.2
 colorama==0.4.6
-Django==5.1.1
+Django==4.2
 idna==3.10
 jmespath==1.0.1
 pathspec==0.10.1
