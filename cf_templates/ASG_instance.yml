@@ -182,7 +182,7 @@ Resources:
     Type: AWS::AutoScaling::LaunchConfiguration
     Properties:
       InstanceType: !Ref InstanceType
-      ImageId: ami-09b0a86a2c84101e1
+      ImageId: ami-0866a3c8686eaeeba
       SecurityGroups:
         - !Ref EC2SecurityGroup
       UserData:
