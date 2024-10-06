@@ -2,5 +2,4 @@ env/
 myenv/
 __pycache__
 myenv/bin/python*
-
-# Elastic Beanstalk Files
+.elasticbeanstalk/*
