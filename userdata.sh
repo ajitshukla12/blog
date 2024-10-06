@@ -17,7 +17,7 @@ cd "/home/ubuntu/$PROJECT_MAIN_DIR_NAME"
 chmod +x scripts/*.sh
 
 # Execute scripts for OS dependencies, Python dependencies, Gunicorn, Nginx, and starting the application
-./scripts/instance_os_dependencies.sh
-./scripts/python_dependencies.sh
-./scripts/gunicorn.sh
-./scripts/start_app.sh
+./scripts/v1/instance_os_dependencies.sh
+./scripts/v1/python_dependencies.sh
+./scripts/v1/gunicorn.sh
+./scripts/v1/start_app.sh

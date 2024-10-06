@@ -1,10 +1,11 @@
 version: 0.0
 os: linux
+
 files:
   - source: .
-    destination: /home/ec2_user/myblog
-hooks:
+    destination: /home/ubuntu/myblog
 
+hooks:
   ApplicationStop:
     - location: scripts/stop_server.sh
       timeout: 300
@@ -14,10 +15,12 @@ hooks:
     - location: scripts/install_dependencies.sh
       timeout: 300
       runas: root
+
   AfterInstall:
     - location: scripts/migrate.sh
       timeout: 300
       runas: root
+      
   ApplicationStart:
     - location: scripts/restart_server.sh
       timeout: 300

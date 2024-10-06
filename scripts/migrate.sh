@@ -1,6 +1,7 @@
 #!/bin/bash
-cd cd /home/ec2_user/myblog
-chmod -R 777 /home/ec2_user/myblog
+cd cd /home/ubuntu/myblog
+
+chmod -R 777 /home/ubuntu/myblog
 
 python3 -m venv venv
 source venv/bin/activate
