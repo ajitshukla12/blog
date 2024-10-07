@@ -1,5 +1,5 @@
 #!/bin/bash
-cd cd /home/ubuntu/myblog
+cd /home/ubuntu/myblog
 
 chmod -R 777 /home/ubuntu/myblog
 
