@@ -124,7 +124,7 @@ Resources:
       SubnetId: !Ref PublicSubnetId1
       RouteTableId: !Ref PublicRouteTable
 
-  # Route Table for Private Subnet 1 (for Load Balancer)
+  #  Route Table for Private Subnet 1 (for Load Balancer)
   PrivateRouteTable1:
     Type: AWS::EC2::RouteTable
     Properties:
