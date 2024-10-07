@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd /home/ubuntu/myblog
+cd /home/ubuntu/myblog || exit 1
 
 source venv/bin/activate
 
