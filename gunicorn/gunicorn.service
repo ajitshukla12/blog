@@ -1,15 +1,20 @@
+# sudo nano /etc/systemd/system/gunicorn.service
+# sudo apt install gunicorn
+
 [Unit]
-Description=gunicorn daemon
+Description=Gunicorn instance to serve myblog
 After=network.target
 
 [Service]
 User=ubuntu
 Group=www-data
 WorkingDirectory=/home/ubuntu/myblog
-ExecStart=/home/ubuntu/myblog/venv/bin/gunicorn \
-          --access-logfile - \
-          --workers 3 \
-          --bind 0.0.0.0:80 \
-          myblog.wsgi:application
+Environment="PATH=/home/ubuntu/myblog/venv/bin"
+ExecStart=/home/ubuntu/myblog/venv/bin/gunicorn --workers 3 --bind 0.0.0.0:8000 myblog.wsgi:application
+
 [Install]
 WantedBy=multi-user.target
+
+
+# sudo systemctl daemon-reload
+# sudo systemctl restart gunicorn
