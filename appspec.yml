@@ -6,11 +6,7 @@ files:
     destination: /home/ubuntu/myblog
 
 hooks:
-  ApplicationStop:
-    - location: scripts/stop_server.sh
-      timeout: 300
-      runas: root
-
+  
   BeforeInstall:
     - location: scripts/install_dependencies.sh
       timeout: 300
@@ -20,9 +16,14 @@ hooks:
     - location: scripts/migrate.sh
       timeout: 300
       runas: root
-      
+
   ApplicationStart:
     - location: scripts/restart_server.sh
+      timeout: 300
+      runas: root
+
+  ApplicationStop:
+    - location: scripts/stop_server.sh
       timeout: 300
       runas: root
   # ValidateService:

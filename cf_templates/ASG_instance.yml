@@ -185,6 +185,7 @@ Resources:
       ImageId: ami-0866a3c8686eaeeba
       SecurityGroups:
         - !Ref EC2SecurityGroup
+      IamInstanceProfile: ec2_codeDeploy
       UserData:
         Fn::Base64: !Sub |
           #!/bin/bash
