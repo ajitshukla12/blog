@@ -222,7 +222,7 @@ Resources:
   LoadBalancer:
     Type: AWS::ElasticLoadBalancingV2::LoadBalancer
     Properties:
-      Name: NGINX-LoadBalancer
+      Name: LoadBalancer
       Subnets: 
         - !Ref PublicSubnetId
         - !Ref PublicSubnetId1
@@ -237,6 +237,7 @@ Resources:
   TargetGroup:
     Type: AWS::ElasticLoadBalancingV2::TargetGroup
     Properties:
+      Name: TG
       VpcId: !Ref MyVPC
       Protocol: HTTP
       Port: 80
@@ -272,3 +273,13 @@ Outputs:
   LoadBalancerDNS:
     Description: DNS name of the load balancer
     Value: !GetAtt LoadBalancer.DNSName
+
+  AutoScalingGroupName:
+    Description: The name of the Auto Scaling Group
+    Value: !Ref AutoScalingGroup
+    Export:
+      Name: AutoScalingGroupName
+
+  TG:
+    Description: The ARN of the Target Group associated with the Load Balancer
+    Value: !Ref TargetGroup
